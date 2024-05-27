@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--#region Style-->
+    <ControlTemplate x:Key="SpecListBoxStyle" TargetType="ListBox">
+        <Border BorderThickness="1" CornerRadius="19" UseLayoutRounding="True" TextBlock.Foreground="Black" TextBlock.TextAlignment="Center">
+            <Border.BorderBrush>
+                <LinearGradientBrush>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0" Color="#752F0C"></GradientStop>
+                        <GradientStop Offset="1" Color="#DB5817"></GradientStop>
+                    </GradientStopCollection>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0" Color="#D9D9D9"></GradientStop>
+                        <GradientStop Offset="1" Color="LightGray"></GradientStop>
+                    </GradientStopCollection>
+                </LinearGradientBrush>
+            </Border.Background>
+            <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
+        </Border>
+    </ControlTemplate>
+    <ControlTemplate x:Key="SpecNextButtonStyle" TargetType="Button">
+        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="19" UseLayoutRounding="True" TextBlock.Foreground="Black" TextBlock.TextAlignment="Center">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0" Color="#FF7246"></GradientStop>
+                        <GradientStop Offset="1" Color="#DB5817"></GradientStop>
+                    </GradientStopCollection>
+                </LinearGradientBrush>
+            </Border.Background>
+            <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
+        </Border>
+    </ControlTemplate>
+    <!--#endregion-->
+    <!--#region SvgImages-->
+    <ControlTemplate x:Key="SpecNextButtonSvg" TargetType="DataGrid">
+        <Viewbox Stretch="Uniform" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+            <Canvas Height="35" Width="43">
+                <Path Data="M22.2836 34.5221C22.0225 34.5232 21.7636 34.4873 21.5218 34.4166C21.2801 34.3458 21.0602 34.2416 20.8748 34.1098C20.6888 33.9777 20.5412 33.8205 20.4404 33.6472C20.3397 33.474 20.2878 33.2882 20.2878 33.1006C20.2878 32.9129 20.3397 32.7271 20.4404 32.5539C20.5412 32.3807 20.6888 32.2234 20.8748 32.0913L37.0861 20.4776C38.2008 19.678 38.827 18.5941 38.827 17.464C38.827 16.3339 38.2008 15.25 37.0861 14.4504L20.8748 2.83662C20.6898 2.70408 20.543 2.54674 20.4429 2.37356C20.3428 2.20039 20.2912 2.01479 20.2912 1.82735C20.2912 1.4488 20.5011 1.08575 20.8748 0.818078C21.2484 0.550403 21.7552 0.400024 22.2836 0.400024C22.812 0.400024 23.3188 0.550403 23.6924 0.818078L39.9037 12.4318C40.8276 13.092 41.5606 13.8764 42.0608 14.7399C42.561 15.6034 42.8184 16.5291 42.8184 17.464C42.8184 18.3988 42.561 19.3245 42.0608 20.188C41.5606 21.0515 40.8276 21.8359 39.9037 22.4961L23.6924 34.1098C23.507 34.2416 23.2871 34.3458 23.0454 34.4166C22.8036 34.4873 22.5447 34.5232 22.2836 34.5221Z" Fill="black" />
+                <Path Data="M2.44118 34.5221C2.18004 34.5232 1.92118 34.4873 1.67942 34.4166C1.43766 34.3458 1.21778 34.2416 1.03237 34.1098C0.846391 33.9777 0.698774 33.8205 0.598037 33.6472C0.497299 33.474 0.445435 33.2882 0.445435 33.1006C0.445435 32.9129 0.497299 32.7271 0.598037 32.5539C0.698774 32.3807 0.846391 32.2234 1.03237 32.0913L20.0613 18.4732C20.2473 18.3411 20.3949 18.1839 20.4956 18.0106C20.5963 17.8374 20.6482 17.6516 20.6482 17.464C20.6482 17.2763 20.5963 17.0905 20.4956 16.9173C20.3949 16.7441 20.2473 16.5868 20.0613 16.4547L1.03237 2.83662C0.65873 2.56895 0.448821 2.2059 0.448821 1.82735C0.448821 1.4488 0.65873 1.08575 1.03237 0.818078C1.40601 0.550403 1.91278 0.400024 2.44118 0.400024C2.96959 0.400024 3.47636 0.550403 3.85 0.818078L22.8591 14.4504C23.9738 15.25 24.6 16.3339 24.6 17.464C24.6 18.5941 23.9738 19.678 22.8591 20.4776L3.85 34.1098C3.66459 34.2416 3.4447 34.3458 3.20295 34.4166C2.96119 34.4873 2.70232 34.5232 2.44118 34.5221Z" Fill="black" />
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+    <ControlTemplate x:Key="SpecBackButtonSvg" TargetType="DataGrid">
+        <Viewbox Stretch="Uniform" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+            <Canvas Height="35" Width="43">
+                <Path Data="M20.6088 34.5221C20.8699 34.5232 21.1287 34.4873 21.3705 34.4166C21.6122 34.3458 21.8321 34.2416 22.0175 34.1098C22.2034 33.9777 22.351 33.8205 22.4518 33.6472C22.5525 33.474 22.6044 33.2882 22.6044 33.1006C22.6044 32.9129 22.5525 32.7271 22.4518 32.5539C22.351 32.3807 22.2034 32.2234 22.0175 32.0913L5.80734 20.4776C4.69266 19.678 4.06656 18.5941 4.06656 17.464C4.06656 16.3339 4.69266 15.25 5.80734 14.4504L22.0175 2.83662C22.2025 2.70408 22.3492 2.54674 22.4493 2.37356C22.5495 2.20039 22.601 2.01479 22.601 1.82735C22.601 1.4488 22.3911 1.08575 22.0175 0.818078C21.6439 0.550403 21.1371 0.400024 20.6088 0.400024C20.0804 0.400024 19.5737 0.550403 19.2 0.818078L2.98991 12.4318C2.06605 13.092 1.33306 13.8764 0.83294 14.7399C0.332817 15.6034 0.0753825 16.5291 0.0753825 17.464C0.0753825 18.3988 0.332817 19.3245 0.83294 20.188C1.33306 21.0515 2.06605 21.8359 2.98991 22.4961L19.2 34.1098C19.3854 34.2416 19.6053 34.3458 19.8471 34.4166C20.0888 34.4873 20.3476 34.5232 20.6088 34.5221Z" Fill="black" />
+                <Path Data="M40.4498 34.5221C40.7109 34.5232 40.9698 34.4873 41.2115 34.4166C41.4533 34.3458 41.6731 34.2416 41.8585 34.1098C42.0445 33.9777 42.1921 33.8205 42.2928 33.6472C42.3936 33.474 42.4454 33.2882 42.4454 33.1006C42.4454 32.9129 42.3936 32.7271 42.2928 32.5539C42.1921 32.3807 42.0445 32.2234 41.8585 32.0913L22.831 18.4732C22.645 18.3411 22.4974 18.1839 22.3967 18.0106C22.2959 17.8374 22.2441 17.6516 22.2441 17.464C22.2441 17.2763 22.2959 17.0905 22.3967 16.9173C22.4974 16.7441 22.645 16.5868 22.831 16.4547L41.8585 2.83662C42.2322 2.56895 42.442 2.2059 42.442 1.82735C42.442 1.4488 42.2322 1.08575 41.8585 0.818078C41.4849 0.550403 40.9782 0.400024 40.4498 0.400024C39.9215 0.400024 39.4147 0.550403 39.0411 0.818078L20.0334 14.4504C18.9187 15.25 18.2926 16.3339 18.2926 17.464C18.2926 18.5941 18.9187 19.678 20.0334 20.4776L39.0411 34.1098C39.2265 34.2416 39.4464 34.3458 39.6881 34.4166C39.9299 34.4873 40.1887 34.5232 40.4498 34.5221Z" Fill="black" />
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+    <!--#endregion-->
+</ResourceDictionary>

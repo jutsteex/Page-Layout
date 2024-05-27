@@ -1,0 +1,70 @@
+﻿<Window x:Class="Page_Layout.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Page_Layout.Windows"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="570" Height="600" MinWidth="740" Width="800" MaxWidth="1920" MaxHeight="1080" >
+
+    <Grid>
+        <!--#region Цвет заднего фона-->
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStopCollection>
+                    <GradientStop Offset="0" Color="#57585A"></GradientStop>
+                    <GradientStop Offset="1" Color="#262626"></GradientStop>
+                </GradientStopCollection>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <!--#endregion-->
+        <!--#region Разметка колонок-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="64" MaxWidth="68" ></ColumnDefinition>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition MinWidth="64" MaxWidth="68"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--#endregion-->
+        <!--#region 0 Столбец-->
+        <Button Width="60" Height="384" Template="{StaticResource NextButtonStyle}" Grid.Column="0">
+            <DataGrid Template="{StaticResource BackButtonSvg}" Width="45" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            </DataGrid>
+        </Button>
+        <!--#endregion-->
+        <!--#region 1 Столбец-->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label Content="Тип спецификации" HorizontalAlignment="Center" FontSize="20" FontFamily="Arial" Margin="0,10,0,0"/>
+                <ListBox Template="{StaticResource MainListBoxStyle}" Margin="10,50,10,40"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Label Content="Имя спецификации" HorizontalAlignment="Center" FontSize="20" FontFamily="Arial" Margin="0,10,0,0"/>
+                <ListBox Template="{StaticResource MainListBoxStyle}" Margin="10,50,10,40"/>
+            </Grid>
+        </Grid>
+        <!--#endregion-->
+        <!--#region 2 Столбец-->
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Категория" HorizontalAlignment="Center" FontSize="20" Grid.Row="0" FontFamily="Arial" Margin="0,10,0,0"/>
+            <ListBox Template="{StaticResource MainListBoxStyle}" Grid.Row="1" Margin="0,5,0,10"/>
+        </Grid>
+        <!--#endregion-->
+        <!--#region 3 Столбец-->
+        <Button Width="60" Height="384" Template="{StaticResource NextButtonStyle}" Click="Button_Click" Grid.Column="3">
+            <DataGrid Template="{StaticResource NextButtonSvg}" Width="45" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            </DataGrid>
+        </Button>
+        <!--#endregion-->
+    </Grid>
+</Window>

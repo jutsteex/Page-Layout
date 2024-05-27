@@ -1,0 +1,56 @@
+﻿<Window x:Class="Page_Layout.SpecificationSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Page_Layout"
+        mc:Ignorable="d"
+        Title="SpecificationSelectionWindow" Height="600" Width="800">
+
+    <Grid>
+        <!--#region Цвет заднего фона-->
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStopCollection>
+                    <GradientStop Offset="0" Color="#57585A"></GradientStop>
+                    <GradientStop Offset="1" Color="#262626"></GradientStop>
+                </GradientStopCollection>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <!--#endregion-->
+        <!--#region Разметка колонок-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="64" MaxWidth="68" ></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition MinWidth="64" MaxWidth="68"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--#endregion-->
+        <!--#region 0 Колонка-->
+        <Button Height="384" Width="60" Template="{StaticResource SpecNextButtonStyle}" Click="Button_Click" Grid.Column="0">
+            <DataGrid Template="{StaticResource SpecBackButtonSvg}" Width="50" Height="50"/>
+        </Button>
+        <!--#endregion-->
+        <!--#region 1 Колонка-->
+        <StackPanel Grid.Column="1">
+            <Label Content="Выберите поле спецификации" FontSize="20" VerticalAlignment="Top" FontFamily="Arial" HorizontalContentAlignment="Center"/>
+            <Grid MinHeight="540" MaxHeight="1100" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" ></ColumnDefinition>
+                    <ColumnDefinition Width="*" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <ListBox Template="{StaticResource SpecListBoxStyle}" Grid.Column="0" Margin="5">
+
+                </ListBox>
+                <ListBox Template="{StaticResource SpecListBoxStyle}" Grid.Column="1" Margin="5">
+
+                </ListBox>
+            </Grid>
+        </StackPanel>
+        <!--#endregion-->
+        <!--#region 2 Колонка-->
+        <Button Height="384" Width="60" Template="{StaticResource SpecNextButtonStyle}" Grid.Column="2">
+            <DataGrid Template="{StaticResource SpecNextButtonSvg}" Width="50" Height="50"/>
+        </Button>
+        <!--#endregion-->
+    </Grid>
+</Window>
